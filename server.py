@@ -2,8 +2,8 @@ from concurrent import futures
 import logging
 
 import grpc
-from api.server_pb2_grpc import PatternsServicer, add_PatternsServicer_to_server
-from api.server_pb2 import PatternsCollection, Pattern, Rect
+from server_pb2_grpc import PatternsServicer, add_PatternsServicer_to_server
+from server_pb2 import PatternsCollection, Pattern, Rect
 
 class Patterns(PatternsServicer):
 
