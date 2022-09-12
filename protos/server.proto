@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+service Patterns {
+  rpc GetPatterns (EmptyRequest) returns (PatternsCollection) {}
+}
+
+message EmptyRequest {}
+
+message Rect {
+    required float left = 1;
+    required float top = 2;
+    required float right = 3;
+    required float bottom = 4;
+}
+
+message Pattern {
+    required Rect image = 1;
+    repeated Rect colors = 2;
+}
+
+message PatternsCollection {
+    repeated Pattern patterns = 1;
+}
